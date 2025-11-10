@@ -17,7 +17,8 @@ export const router = createBrowserRouter([
             },
             {
                 path : '/all-propertise',
-                Component: AllPropertise,
+                element : <AllPropertise></AllPropertise>,
+                loader: () =>fetch('http://localhost:3000/properties'),
             },
             {
                 path : '/add-propertise',

@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Modern Family Apartment",
+    "category": "Rent",
+    "short_description": "Spacious 3-bedroom apartment with balcony and city view.",
+    "location": "Dhanmondi, Dhaka",
+    "price": 35000,
+    "image": "https://i.ibb.co/THrD3PS/apartment-modern.jpg",
+    "postedBy": "Mehedi Hasan",
+    "createdAt": "2025-10-15T10:12:00.000Z",
+    "userEmail": "mehedi@example.com",
+    "userName": "Mehedi Hasan"
+  },
+  {
+    "name": "Luxury Lake View Condo",
+    "category": "Sale",
+    "short_description": "High-end condo with lake view, smart home features, and premium interior.",
+    "location": "Gulshan, Dhaka",
+    "price": 18000000,
+    "image": "https://i.ibb.co/vZ8ZpGq/lakeview-condo.jpg",
+    "postedBy": "Sara Ahmed",
+    "createdAt": "2025-09-28T15:45:00.000Z",
+    "userEmail": "sara@example.com",
+    "userName": "Sara Ahmed"
+  },
+  {
+    "name": "Commercial Office Space",
+    "category": "Commercial",
+    "short_description": "1200 sq ft open layout ideal for corporate offices.",
+    "location": "Banani, Dhaka",
+    "price": 120000,
+    "image": "https://i.ibb.co/p36DFws/commercial-office.jpg",
+    "postedBy": "Kamal Uddin",
+    "createdAt": "2025-08-20T09:20:00.000Z",
+    "userEmail": "kamal@example.com",
+    "userName": "Kamal Uddin"
+  },
+  {
+    "name": "Premium Residential Land",
+    "category": "Land",
+    "short_description": "10 katha premium plot inside gated community.",
+    "location": "Purbachal, Dhaka",
+    "price": 5500000,
+    "image": "https://i.ibb.co/PgZbMbt/land-plot.jpg",
+    "postedBy": "Shakil Rahman",
+    "createdAt": "2025-07-11T12:10:00.000Z",
+    "userEmail": "shakil@example.com",
+    "userName": "Shakil Rahman"
+  },
+  {
+    "name": "Budget Family Apartment",
+    "category": "Rent",
+    "short_description": "Affordable 2-bedroom apartment near public transport.",
+    "location": "Mirpur 10, Dhaka",
+    "price": 18000,
+    "image": "https://i.ibb.co/FYKn9d5/budget-apartment.jpg",
+    "postedBy": "Rafid Khan",
+    "createdAt": "2025-10-02T08:30:00.000Z",
+    "userEmail": "rafid@example.com",
+    "userName": "Rafid Khan"
+  },
+  {
+    "name": "Corporate Commercial Floor",
+    "category": "Commercial",
+    "short_description": "Fully furnished 3000 sq ft corporate floor with conference room.",
+    "location": "Motijheel, Dhaka",
+    "price": 300000,
+    "image": "https://i.ibb.co/sP7XxkW/commercial-floor.jpg",
+    "postedBy": "Nafis Chowdhury",
+    "createdAt": "2025-09-18T14:00:00.000Z",
+    "userEmail": "nafis@example.com",
+    "userName": "Nafis Chowdhury"
+  },
+  {
+    "name": "Luxury Duplex House",
+    "category": "Sale",
+    "short_description": "Modern 2-story duplex with private garden and garage.",
+    "location": "Uttara Sector 12, Dhaka",
+    "price": 25000000,
+    "image": "https://i.ibb.co/BcVgD1g/duplex-house.jpg",
+    "postedBy": "Arman Hossain",
+    "createdAt": "2025-06-22T11:45:00.000Z",
+    "userEmail": "arman@example.com",
+    "userName": "Arman Hossain"
+  },
+  {
+    "name": "Studio Apartment for Rent",
+    "category": "Rent",
+    "short_description": "Compact studio apartment ideal for bachelors or students.",
+    "location": "Bashundhara, Dhaka",
+    "price": 15000,
+    "image": "https://i.ibb.co/QM7w5Ch/studio-apartment.jpg",
+    "postedBy": "Risha Jahan",
+    "createdAt": "2025-08-11T10:00:00.000Z",
+    "userEmail": "risha@example.com",
+    "userName": "Risha Jahan"
+  },
+  {
+    "name": "Warehouse and Storage Space",
+    "category": "Commercial",
+    "short_description": "5000 sq ft warehouse with truck access and security.",
+    "location": "Tongi, Gazipur",
+    "price": 90000,
+    "image": "https://i.ibb.co/mTqNW0M/warehouse-storage.jpg",
+    "postedBy": "Faisal Karim",
+    "createdAt": "2025-09-05T16:20:00.000Z",
+    "userEmail": "faisal@example.com",
+    "userName": "Faisal Karim"
+  },
+  {
+    "name": "Eco-Friendly Resort Cottage",
+    "category": "Sale",
+    "short_description": "A beautiful eco-cottage with natural surroundings.",
+    "location": "Sreemangal, Sylhet",
+    "price": 8000000,
+    "image": "https://i.ibb.co/8gg0L7R/resort-cottage.jpg",
+    "postedBy": "Jubayer Ahmed",
+    "createdAt": "2025-09-30T13:50:00.000Z",
+    "userEmail": "jubayer@example.com",
+    "userName": "Jubayer Ahmed"
+  }
+]

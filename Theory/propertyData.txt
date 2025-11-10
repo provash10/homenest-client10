@@ -1,0 +1,202 @@
+[
+  {
+    "name": "Modern Family Apartment",
+    "category": "Rent",
+    "short_description": "Spacious 3-bedroom apartment with balcony and city view.",
+    "location": "Dhanmondi, Dhaka",
+    "price": 35000,
+    "image": "https://i.ibb.co/THrD3PS/apartment-modern.jpg",
+    "postedBy": "Mehedi Hasan",
+    "createdAt": "2025-10-15T10:12:00.000Z"
+  },
+  {
+    "name": "Luxury Villa with Private Pool",
+    "category": "Sale",
+    "short_description": "5-bedroom luxury villa with modern interior and private swimming pool.",
+    "location": "Gulshan 2, Dhaka",
+    "price": 32000000,
+    "image": "https://i.ibb.co/bJHq7mf/luxury-villa.jpg",
+    "postedBy": "Rafiul Islam",
+    "createdAt": "2025-10-14T09:00:00.000Z"
+  },
+  {
+    "name": "Commercial Office Space",
+    "category": "Commercial",
+    "short_description": "Fully furnished office space ideal for startups and businesses.",
+    "location": "Banani, Dhaka",
+    "price": 120000,
+    "image": "https://i.ibb.co/ZVYbHgj/office-space.jpg",
+    "postedBy": "Ayesha Rahman",
+    "createdAt": "2025-10-13T15:30:00.000Z"
+  },
+  {
+    "name": "Peaceful Suburban House",
+    "category": "Sale",
+    "short_description": "Beautiful 4-bedroom home surrounded by greenery, perfect for families.",
+    "location": "Purbachal, Dhaka",
+    "price": 18000000,
+    "image": "https://i.ibb.co/pnnv3Kn/suburban-house.jpg",
+    "postedBy": "Tanvir Ahmed",
+    "createdAt": "2025-10-12T11:45:00.000Z"
+  },
+  {
+    "name": "Cozy Studio Apartment",
+    "category": "Rent",
+    "short_description": "Compact studio ideal for bachelors or students near bus stand.",
+    "location": "Mirpur 10, Dhaka",
+    "price": 15000,
+    "image": "https://i.ibb.co/gjjrhrN/studio-apartment.jpg",
+    "postedBy": "Sadia Noor",
+    "createdAt": "2025-10-11T14:25:00.000Z"
+  },
+  {
+    "name": "Open Land for Development",
+    "category": "Land",
+    "short_description": "12 katha open land suitable for commercial or residential project.",
+    "location": "Bashundhara R/A, Dhaka",
+    "price": 55000000,
+    "image": "https://i.ibb.co/rc8xwfn/open-land.jpg",
+    "postedBy": "Mahfuz Alam",
+    "createdAt": "2025-10-10T09:15:00.000Z"
+  },
+  {
+    "name": "Duplex Villa with Garden",
+    "category": "Sale",
+    "short_description": "Elegant duplex villa with large garden and modern kitchen setup.",
+    "location": "Uttara Sector 4, Dhaka",
+    "price": 25000000,
+    "image": "https://i.ibb.co/YpkJfsc/duplex-villa.jpg",
+    "postedBy": "Fahim Chowdhury",
+    "createdAt": "2025-10-09T12:00:00.000Z"
+  },
+  {
+    "name": "Urban Condo Apartment",
+    "category": "Rent",
+    "short_description": "Stylish 2-bedroom condo near shopping mall and metro station.",
+    "location": "Mohakhali, Dhaka",
+    "price": 28000,
+    "image": "https://i.ibb.co/dBSv1R1/urban-condo.jpg",
+    "postedBy": "Ritu Hasan",
+    "createdAt": "2025-10-08T10:50:00.000Z"
+  },
+  {
+    "name": "Luxury Penthouse Suite",
+    "category": "Sale",
+    "short_description": "Top-floor penthouse with skyline view and modern interior.",
+    "location": "Banani, Dhaka",
+    "price": 40000000,
+    "image": "https://i.ibb.co/sjQhFyN/penthouse-suite.jpg",
+    "postedBy": "Samiul Kabir",
+    "createdAt": "2025-10-07T16:40:00.000Z"
+  },
+  {
+    "name": "Modern Shop Space",
+    "category": "Commercial",
+    "short_description": "Ground-floor shop ideal for retail or boutique business.",
+    "location": "New Market, Dhaka",
+    "price": 85000,
+    "image": "https://i.ibb.co/t8zY3vJ/shop-space.jpg",
+    "postedBy": "Nadia Rahman",
+    "createdAt": "2025-10-06T08:10:00.000Z"
+  },
+  {
+    "name": "Luxury Lake View Apartment",
+    "category": "Sale",
+    "short_description": "3-bedroom apartment overlooking a serene lake view.",
+    "location": "Gulshan 1, Dhaka",
+    "price": 26000000,
+    "image": "https://i.ibb.co/SnDnDw9/lake-view-apartment.jpg",
+    "postedBy": "Imran Hossain",
+    "createdAt": "2025-10-05T09:25:00.000Z"
+  },
+  {
+    "name": "Affordable Family Apartment",
+    "category": "Rent",
+    "short_description": "Affordable 2-bedroom apartment for small families.",
+    "location": "Rampura, Dhaka",
+    "price": 18000,
+    "image": "https://i.ibb.co/jk3DmXK/family-apartment.jpg",
+    "postedBy": "Tasnim Akter",
+    "createdAt": "2025-10-04T11:30:00.000Z"
+  },
+  {
+    "name": "Warehouse for Rent",
+    "category": "Commercial",
+    "short_description": "Large warehouse suitable for storage or logistics.",
+    "location": "Tejgaon Industrial Area, Dhaka",
+    "price": 90000,
+    "image": "https://i.ibb.co/fN9dRk4/warehouse.jpg",
+    "postedBy": "Masum Khan",
+    "createdAt": "2025-10-03T14:00:00.000Z"
+  },
+  {
+    "name": "Hilltop Eco Resort",
+    "category": "Sale",
+    "short_description": "Scenic eco-resort surrounded by hills and natural beauty.",
+    "location": "Bandarban, Chittagong",
+    "price": 60000000,
+    "image": "https://i.ibb.co/T8rwNSC/eco-resort.jpg",
+    "postedBy": "Rezaul Karim",
+    "createdAt": "2025-10-02T13:15:00.000Z"
+  },
+  {
+    "name": "Seaside Holiday Cottage",
+    "category": "Rent",
+    "short_description": "Peaceful sea-facing cottage for weekend getaways.",
+    "location": "Cox’s Bazar",
+    "price": 45000,
+    "image": "https://i.ibb.co/sb0KzMP/holiday-cottage.jpg",
+    "postedBy": "Farzana Tania",
+    "createdAt": "2025-10-01T09:45:00.000Z"
+  },
+  {
+    "name": "Downtown Business Hub",
+    "category": "Commercial",
+    "short_description": "Prime business location with conference and parking facilities.",
+    "location": "Motijheel, Dhaka",
+    "price": 140000,
+    "image": "https://i.ibb.co/Ky2Vb4D/business-hub.jpg",
+    "postedBy": "Khaled Mahmud",
+    "createdAt": "2025-09-30T15:25:00.000Z"
+  },
+  {
+    "name": "Farmhouse with Lake View",
+    "category": "Sale",
+    "short_description": "Beautiful farmhouse with a private lake and greenery.",
+    "location": "Gazipur",
+    "price": 22000000,
+    "image": "https://i.ibb.co/1bX9Gpc/farmhouse.jpg",
+    "postedBy": "Rashedul Islam",
+    "createdAt": "2025-09-29T10:30:00.000Z"
+  },
+  {
+    "name": "Beachfront Land Plot",
+    "category": "Land",
+    "short_description": "10 katha land plot facing the beach, ideal for resorts.",
+    "location": "Inani Beach, Cox’s Bazar",
+    "price": 80000000,
+    "image": "https://i.ibb.co/wQN2ptT/beach-land.jpg",
+    "postedBy": "Nusrat Ahmed",
+    "createdAt": "2025-09-28T12:10:00.000Z"
+  },
+  {
+    "name": "Mountain View Cabin",
+    "category": "Rent",
+    "short_description": "Wooden cabin with mountain view, perfect for relaxation.",
+    "location": "Sylhet",
+    "price": 32000,
+    "image": "https://i.ibb.co/jhnnV7Y/mountain-cabin.jpg",
+    "postedBy": "Anika Jahan",
+    "createdAt": "2025-09-27T08:00:00.000Z"
+  },
+  {
+    "name": "Luxury Riverside House",
+    "category": "Sale",
+    "short_description": "Elegant house located beside a peaceful river with large patio.",
+    "location": "Savar, Dhaka",
+    "price": 19500000,
+    "image": "https://i.ibb.co/CPnm7ZK/riverside-house.jpg",
+    "postedBy": "Hasib Rahman",
+    "createdAt": "2025-09-26T09:40:00.000Z"
+  }
+]

@@ -5,6 +5,7 @@ import Login from "../Pages/Auth/Login";
 import AllPropertise from "../Pages/AllPropertise";
 import AddProperise from "../Pages/AddProperise";
 import MyPropertise from "../Pages/MyPropertise";
+import PropertyDetails from "../Components/PropertyDetails";
 
 export const router = createBrowserRouter([
     {
@@ -19,6 +20,11 @@ export const router = createBrowserRouter([
                 path : '/all-propertise',
                 element : <AllPropertise></AllPropertise>,
                 loader: () =>fetch('http://localhost:3000/properties'),
+            },
+            {
+                path: '/property-details/:id',
+                element: <PropertyDetails></PropertyDetails>,
+                loader: ({params})=>fetch(`http://localhost:3000/properties/${params.id}`)
             },
             {
                 path : '/add-propertise',

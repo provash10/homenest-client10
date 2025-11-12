@@ -2,7 +2,7 @@ import React, { use, useState } from 'react';
 import MyContainer from '../../Components/MyContainer';
 import { Link, useNavigate } from 'react-router';
 import toast from 'react-hot-toast';
-import { GoogleAuthProvider, signInWithPopup, signOut, updateProfile} from 'firebase/auth';
+import { GoogleAuthProvider, signInWithPopup, signOut} from 'firebase/auth';
 import { auth } from '../../Firebase/firebase.config';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { AuthContext } from '../../Contexts/AuthContext';
@@ -13,7 +13,7 @@ const googleProvider = new GoogleAuthProvider();
 const Register = () => {
     const [show, setShow] = useState(false)
      const [user, setUser] = useState(null);
-    const {createUserWithEmailAndPasswordFunc} = use(AuthContext);
+    const {createUserWithEmailAndPasswordFunc,updateProfileFunc} = use(AuthContext);
 
      const navigate = useNavigate();
 
@@ -64,10 +64,8 @@ const Register = () => {
     .then((res)=>{
 
       //update profile
-      updateProfile(res.user,{
-        displayName : name,
-        photoURL : photo,
-      })
+      // updateProfile(res.user,
+      updateProfileFunc(name, photo)
       .then((res)=>{
         console.log(res);
         toast.success("Update Successful")
@@ -78,6 +76,7 @@ const Register = () => {
 
         console.log(res);
         toast.success("Register Successfully");
+        navigate("/")
     })
     .catch((error) => {
         // console.log(error)

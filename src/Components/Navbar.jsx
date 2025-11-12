@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { NavLink } from 'react-router';
 import { AuthContext } from '../Contexts/AuthContext';
 
 const Navbar = () => {
- 
+ const { user, signOutUserFunc, setUser } = useContext(AuthContext) || {};
+  
+ const handleLogout = () => {
+    signOutUserFunc()
+      .then(() => {
+        setUser(null);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
 
   const links =(
     <>

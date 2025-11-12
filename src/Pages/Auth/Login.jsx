@@ -1,16 +1,14 @@
-import React, { useState } from 'react';
+import React, { use, useState } from 'react';
 import MyContainer from '../../Components/MyContainer';
 import { Link } from 'react-router';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import { GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup, signOut } from 'firebase/auth';
-import { auth } from '../../Firebase/firebase.config';
 import toast from 'react-hot-toast';
+import { AuthContext } from '../../Contexts/AuthContext';
 
-const googleProvider = new GoogleAuthProvider();
 
 const Login = () => {
   const [show, setShow] = useState(false);
-  const [user, setUser] = useState(null);
+  const {signInWithEmailAndPasswordFunc,signInWithEmailFunc,signOutUserFunc,user,setUser} =use(AuthContext)
 
   const handleLogin = (e)=>{
     e.preventDefault();
@@ -18,7 +16,7 @@ const Login = () => {
     const password = e.target.password?.value;
     console.log({email,password});
 
-    signInWithEmailAndPassword(auth,email,password)
+    signInWithEmailAndPasswordFunc(email,password)
     .then(res=>{
       console.log(res);
       setUser(res.user);
@@ -27,12 +25,13 @@ const Login = () => {
     .catch((e)=>{
       console.log(e);
       toast.error(e.message);
+      
     });
 
   }
 
   const handleGoogleLogin=()=>{
-    signInWithPopup(auth, googleProvider)
+    signInWithEmailFunc()
     .then(res=>{
       console.log(res);
       setUser(res.user);
@@ -44,9 +43,10 @@ const Login = () => {
     })
   }
 
-   console.log(user);
+  //  console.log(user);
    const handleLogout = ()=>{
-    signOut(auth)
+    // signOut(auth)
+    signOutUserFunc()
     .then(()=>{
       toast.success("logOut Successfull");
       setUser(null)

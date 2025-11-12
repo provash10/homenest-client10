@@ -1,7 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router';
+import { AuthContext } from '../Contexts/AuthContext';
 
 const Navbar = () => {
+ 
 
   const links =(
     <>
@@ -32,9 +34,28 @@ const Navbar = () => {
       {links}
     </ul>
   </div>
+
   <div className="navbar-end gap-2">
-    <NavLink to='/login' className='bg-purple-500 text-white px-4 py-2 rounded-md font-semibold'>Login</NavLink>
-  </div>
+        {user ? (
+          <>
+            <span className="font-semibold">{user.displayName || "User"}</span>
+            <button
+              onClick={handleLogout}
+              className="bg-red-500 text-white px-4 py-2 rounded-md font-semibold"
+            >
+              Logout
+            </button>
+          </>
+        ) : (
+          <NavLink
+            to="/login"
+            className="bg-purple-500 text-white px-4 py-2 rounded-md font-semibold"
+          >
+            Login
+          </NavLink>
+        )}
+      </div>
+
 </div>
     );
 };

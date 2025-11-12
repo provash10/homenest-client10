@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLoaderData } from 'react-router';
+import { Link, useLoaderData } from 'react-router';
 
 
 const PropertyDetails = () => {
@@ -84,14 +84,16 @@ const PropertyDetails = () => {
                                 </button>
                             </form>
 
-                            <div className="mt-6 space-y-4">
+                            {/* <div className="mt-6 space-y-4">
                                 <div className="p-4 border rounded-xl bg-white">
                                     <h3 className="font-semibold text-gray-900">Zahid Hasan</h3>
                                     <p className="text-sm text-yellow-600">Rating: 5/5</p>
                                     <p className="text-gray-700">Great property, Very clean.</p>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
+
+                        <Link to='/' className='bg-amber-500 p-3'> click to watch Rating Review</Link>
                     </div>
                 </div>
             </div>

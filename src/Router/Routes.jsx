@@ -6,6 +6,8 @@ import AllPropertise from "../Pages/AllPropertise";
 import AddProperise from "../Pages/AddProperise";
 import MyPropertise from "../Pages/MyPropertise";
 import PropertyDetails from "../Components/PropertyDetails";
+import Register from "../Pages/Auth/Register";
+
 
 export const router = createBrowserRouter([
     {
@@ -37,6 +39,10 @@ export const router = createBrowserRouter([
             {
                 path : '/login',
                 Component: Login,
+            },
+            {
+                path : '/register',
+                Component: Register,
             }
         ]
     }

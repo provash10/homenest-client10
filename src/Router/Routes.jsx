@@ -18,7 +18,9 @@ export const router = createBrowserRouter([
         children:[
             {
                 index : true,
-                Component: Home,
+                element: <Home></Home>,
+                // loader: () =>fetch('http://localhost:3000/properties'),
+                loader: () => fetch('http://localhost:3000/latest-propertises')
             },
             {
                 path : '/all-propertise',

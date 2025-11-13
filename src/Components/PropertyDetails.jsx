@@ -135,7 +135,7 @@ const PropertyDetails = () => {
                             </div> */}
                         </div>
 
-                        <Link to='/' className='bg-amber-500 p-3'> click to watch Rating Review</Link>
+                        <Link to='/my-ratings' className='bg-amber-500 p-3'> click to watch Rating Review</Link>
                     </div>
                 </div>
             </div>

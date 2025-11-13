@@ -21,10 +21,10 @@ const Navbar = () => {
 
   const links = (
     <>
-      <li><NavLink to='/'>Home</NavLink></li>
-      <li><NavLink to='/all-propertise'>All Propertise</NavLink></li>
-      <li><NavLink to='/add-propertise'>Add Propertise</NavLink></li>
-      <li><NavLink to='/my-propertise'>My Propertise</NavLink></li>
+      <li><NavLink to='/' className={({ isActive }) => `text-2xl font-bold ${isActive ? 'underline text-blue-600' : 'hover:underline'}`}>Home</NavLink></li>
+      <li><NavLink to='/all-propertise' className={({ isActive }) => `text-2xl font-bold ${isActive ? 'underline text-blue-600' : 'hover:underline'}`}>All Propertise</NavLink></li>
+      <li><NavLink to='/add-propertise' className={({ isActive }) => `text-2xl font-bold ${isActive ? 'underline text-blue-600' : 'hover:underline'}`}>Add Propertise</NavLink></li>
+      <li><NavLink to='/my-property' className={({ isActive }) => `text-2xl font-bold ${isActive ? 'underline text-blue-600' : 'hover:underline'}`}>My Propertise</NavLink></li>
     </>
   )
 

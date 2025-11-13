@@ -100,8 +100,10 @@ const Login = () => {
           <div className="w-full max-w-md backdrop-blur-lg bg-white/10 border border-white/20 shadow-2xl rounded-2xl p-8">
             
             {user?(<div className="text-center space-y-3">
-              <img src={user?.photoURL || "https://via.placeholder.com/88"} 
-              className='border h-20 w-20 rounded-full mx-auto' alt="image" />
+              {/* <img src={user?.photoURL || "https://via.placeholder.com/88"} 
+              className='border h-20 w-20 rounded-full mx-auto' alt="image" /> */}
+              <img src="https://dummyimage.com/88x88/cccccc/000000"
+              className='border h-20 w-20 rounded-full mx-auto' alt="placeholder" />
               <h2 className='text-xl font-semibold'>{user?.displayName}</h2>
               <p className='text-white/80'>{user?.email}</p>
               <button onClick={handleLogout} className='my-btn'>

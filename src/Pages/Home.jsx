@@ -6,8 +6,10 @@ const Home = () => {
     const data = useLoaderData();
     const [search, setSearch] = useState('');
     // console.log(data);
+    const properties = data || [];
 
-    const filteredProperties = data.filter(property =>
+
+    const filteredProperties = properties.filter(property =>
         property.name.toLowerCase().includes(search.toLowerCase()) ||
         property.category.toLowerCase().includes(search.toLowerCase()) ||
         property.location.toLowerCase().includes(search.toLowerCase())
@@ -28,7 +30,7 @@ const Home = () => {
                 />
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {filteredProperties.length > 0 ? (
                     filteredProperties.map(property => (
                         <LatestProperty key={property._id} property={property} />
@@ -36,7 +38,22 @@ const Home = () => {
                 ) : (
                     <p className="text-center col-span-full text-gray-500">No properties found!</p>
                 )}
-            </div>
+            </div> */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+    {filteredProperties.length > 0 ? (
+        filteredProperties.map(property => (
+            <LatestProperty 
+                key={property._id} 
+                property={{
+                    ...property,
+                    image: property.image || "https://via.placeholder.com/400x300?text=No+Image"
+                }} 
+            />
+        ))
+    ) : (
+        <p className="text-center col-span-full text-gray-500">No properties found!</p>
+    )}
+</div>
         </div>
     );
 };

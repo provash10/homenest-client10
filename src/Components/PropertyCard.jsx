@@ -79,6 +79,9 @@ const PropertyCard = ({property}) => {
         </button> */}
         <div className='flex justify-between items-center gap-4'>
           <Link to={`/property-details/${_id}`} className="flex-1 bg-blue-600 text-white text-center py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium"> View Details</Link>
+          <Link to={`/update-property/${_id}`} className="flex-1 bg-yellow-500 text-white text-center py-2 rounded-lg hover:bg-yellow-600 text-sm font-medium">
+                        Update
+                    </Link>
           <button onClick={handleDelete} type="submit" className="flex-1 bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 transition-colors text-sm font-medium">
                             Delete Property
                         </button>

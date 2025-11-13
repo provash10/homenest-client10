@@ -62,7 +62,7 @@ const AddProperise = () => {
                         />
                     </div>
 
-                    {/* Category */}
+                    {/* category */}
                     <div>
                         <label className="block text-gray-700 font-medium mb-1">Category</label>
                         <select name="category" className="w-full p-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-blue-500">

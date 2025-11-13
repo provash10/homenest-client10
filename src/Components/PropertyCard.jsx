@@ -1,15 +1,59 @@
 import React from 'react';
 import toast from 'react-hot-toast';
-import { Link } from 'react-router';
+import { Link, useLoaderData, useNavigate } from 'react-router';
+import Swal from 'sweetalert2';
 
 
 const PropertyCard = ({property}) => {
     console.log(property); // checked ok
+    const navigate = useNavigate();
     
     const {_id, name, category, short_description, location, price, image, postedBy} = property
     // const handleViewDetails =()=>{
     //     toast.success(`You contacted ${postedBy}!`);
     // }
+
+
+     const handleDelete = () => {
+            console.log('delete ok') //checked
+            Swal.fire({
+                title: "Are you sure?",
+                text: "You won't be able to revert this!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, delete it!"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    //   api call
+                    fetch(`http://localhost:3000/properties/${property._id}`, {
+                        method: "DELETE",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        // body: JSON.stringify(FormData)
+                    })
+                        .then((res) => res.json())
+                        .then(data => {
+                            console.log(data)
+    
+                            navigate('/all-propertise')
+    
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your file has been deleted.",
+                                icon: "success"
+                            });
+                        })
+                        .catch(err => {
+                            console.log(err)
+                        })
+    
+    
+                }
+            });
+        }
 
     return (
         // <div>
@@ -33,7 +77,12 @@ const PropertyCard = ({property}) => {
         {/* <button onClick={handleViewDetails} className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm">
           View Details
         </button> */}
-        <Link to={`/property-details/${_id}`} className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm"> View Details</Link>
+        <div className='flex justify-between items-center gap-4'>
+          <Link to={`/property-details/${_id}`} className="flex-1 bg-blue-600 text-white text-center py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium"> View Details</Link>
+          <button onClick={handleDelete} type="submit" className="flex-1 bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 transition-colors text-sm font-medium">
+                            Delete Property
+                        </button>
+        </div>
         <p className="text-xs text-gray-400 mt-1">Posted by {postedBy}</p>
       </div>
 
@@ -42,3 +91,4 @@ const PropertyCard = ({property}) => {
 };
 
 export default PropertyCard;
+

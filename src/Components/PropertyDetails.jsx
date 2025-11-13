@@ -1,14 +1,56 @@
 import React from 'react';
-import { Link, useLoaderData } from 'react-router';
+import { Link, useLoaderData, useNavigate } from 'react-router';
+import Swal from 'sweetalert2';
 
 
 const PropertyDetails = () => {
     const data = useLoaderData();
     // console.log(data); //checked
+    const navigate = useNavigate();
     const property = data.result;
     console.log(property);
-     const {_id, name, category, short_description, description, location, price, image, postedBy, createdAt, userEmail, userName} = property
+    const { _id, name, category, short_description, description, location, price, image, postedBy, createdAt, userEmail, userName } = property
 
+    const handleDelete = () => {
+        console.log('delete ok') //checked
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                //   api call
+                fetch(`http://localhost:3000/properties/${property._id}`, {
+                    method: "DELETE",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    // body: JSON.stringify(FormData)
+                })
+                    .then((res) => res.json())
+                    .then(data => {
+                        console.log(data)
+
+                        navigate('/all-propertise')
+
+                        Swal.fire({
+                            title: "Deleted!",
+                            text: "Your file has been deleted.",
+                            icon: "success"
+                        });
+                    })
+                    .catch(err => {
+                        console.log(err)
+                    })
+
+
+            }
+        });
+    }
     return (
         <div className="min-h-screen bg-gray-50">
 
@@ -42,7 +84,7 @@ const PropertyDetails = () => {
                         <Link to={`/update-property/${_id}`} className="bg-green-600 hover:bg-amber-600 hover:text-amber-100 text-2xl font-bold text-center px-6 py-3 rounded-3xl">
                             Edit Property
                         </Link>
-                        <button className="bg-red-600 hover:bg-cyan-500 hover:text-red-600 text-white text-2xl font-bold text-center px-6 py-3 rounded-3xl">
+                        <button onClick={handleDelete} type="submit" className="bg-red-600 hover:bg-cyan-500 hover:text-red-600 text-white text-2xl font-bold text-center px-6 py-3 rounded-3xl">
                             Delete Property
                         </button>
                     </div>

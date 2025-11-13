@@ -7,6 +7,7 @@ import AddProperise from "../Pages/AddProperise";
 import MyPropertise from "../Pages/MyPropertise";
 import PropertyDetails from "../Components/PropertyDetails";
 import Register from "../Pages/Auth/Register";
+import PrivateRoute from "./PrivateRoute";
 
 
 export const router = createBrowserRouter([
@@ -30,7 +31,10 @@ export const router = createBrowserRouter([
             },
             {
                 path : '/add-propertise',
-                Component:AddProperise ,
+                
+                element: (<PrivateRoute>
+                    <AddProperise></AddProperise>
+                </PrivateRoute>),
             },
             {
                 path : '/my-propertise',

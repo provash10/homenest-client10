@@ -12,10 +12,9 @@ const googleProvider = new GoogleAuthProvider();
 
 const Register = () => {
     const [show, setShow] = useState(false)
-     const [user, setUser] = useState(null);
-    const {createUserWithEmailAndPasswordFunc,updateProfileFunc} = use(AuthContext);
-
+    const {createUserWithEmailAndPasswordFunc,updateProfileFunc,signOutUserFunc,user,setUser} = use(AuthContext);
      const navigate = useNavigate();
+
 
      const handleGoogleLogin=()=>{
     signInWithPopup(auth, googleProvider)
@@ -36,7 +35,7 @@ const Register = () => {
    const handleLogout = () => {
     signOut(auth)
       .then(() => {
-        toast.success('Logout Successful');
+        // toast.success('Logout Successful');
         setUser(null);
         navigate('/login');
       })
@@ -62,25 +61,31 @@ const Register = () => {
     }
     createUserWithEmailAndPasswordFunc(email, password)
     .then((res)=>{
-
+    const createdUser = res.user;
       //update profile
       // updateProfile(res.user,
       updateProfileFunc(name, photo)
-      .then((res)=>{
-        console.log(res);
-        toast.success("Update Successful")
+      .then(()=>{
+        // console.log(res);
+        setUser({
+              ...createdUser,
+              displayName: name,
+              photoURL: photo
+            });
+            toast.success("Update Successful")
+            navigate('/');
       })
-      .catch((error)=>{
-        toast.error(error.message);
-      })
+      .catch((err) => {
+          toast.error("Profile update failed: " + err.message);
+        });
 
-        console.log(res);
-        toast.success("Register Successfully");
-        navigate("/")
+      toast.success("Registration successful!");
     })
+       
     .catch((error) => {
         // console.log(error)
-        console.log(error.code) 
+        console.log(error.code)
+       
         
         if (error.code === "auth/invalid-email") {
           toast.error("Invalid email format!");
@@ -108,6 +113,7 @@ const Register = () => {
         }
       })
     }
+
 
     return (
         <div className="min-h-[96vh] flex items-center justify-center bg-gradient-to-br from-indigo-500 via-purple-600 to-pink-500 relative overflow-hidden">

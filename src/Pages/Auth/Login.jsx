@@ -1,6 +1,6 @@
 import React, { use, useState } from 'react';
 import MyContainer from '../../Components/MyContainer';
-import { Link } from 'react-router';
+import { Link, Navigate, useLocation, useNavigate } from 'react-router';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import toast from 'react-hot-toast';
 import { AuthContext } from '../../Contexts/AuthContext';
@@ -8,7 +8,19 @@ import { AuthContext } from '../../Contexts/AuthContext';
 
 const Login = () => {
   const [show, setShow] = useState(false);
-  const {signInWithEmailAndPasswordFunc,signInWithEmailFunc,signOutUserFunc,user,setUser} =use(AuthContext)
+  const {signInWithEmailAndPasswordFunc,signInWithEmailFunc,signOutUserFunc,user,setUser,setLoading} =use(AuthContext)
+  
+  //location
+  const location = useLocation();
+  console.log(location);
+  const from = location.state || "/";
+
+  const navigate = useNavigate();
+
+  if(user){
+    navigate("/");
+    return;
+  }
 
   const handleLogin = (e)=>{
     e.preventDefault();
@@ -19,8 +31,11 @@ const Login = () => {
     signInWithEmailAndPasswordFunc(email,password)
     .then(res=>{
       console.log(res);
+      setLoading(false);
       setUser(res.user);
       toast.success("Login Successful");
+      // navigate('/')
+       navigate(from, { replace: true });
     })
     .catch((e)=>{
       console.log(e);
@@ -34,8 +49,10 @@ const Login = () => {
     signInWithEmailFunc()
     .then(res=>{
       console.log(res);
+      setLoading(false);
       setUser(res.user);
       toast.success("Google Login Successful");
+       navigate(from, { replace: true });
     })
     .catch((e)=>{
       console.log(e);
@@ -49,6 +66,7 @@ const Login = () => {
     signOutUserFunc()
     .then(()=>{
       toast.success("logOut Successfull");
+      setLoading(false);
       setUser(null)
     })
     .catch((e)=>{

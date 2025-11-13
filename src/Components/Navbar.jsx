@@ -2,9 +2,10 @@ import React, { useContext } from 'react';
 import { NavLink } from 'react-router';
 import { AuthContext } from '../Contexts/AuthContext';
 import toast from 'react-hot-toast';
+import { ClockLoader } from 'react-spinners';
 
 const Navbar = () => {
-  const { user, signOutUserFunc, setUser } = useContext(AuthContext) || {};
+  const { user, signOutUserFunc, setUser,loading, setLoading } = useContext(AuthContext) || {};
 
   const handleLogout = () => {
     signOutUserFunc()
@@ -26,6 +27,9 @@ const Navbar = () => {
       <li><NavLink to='/my-propertise'>My Propertise</NavLink></li>
     </>
   )
+
+  console.log(loading)
+
   return (
     <div className="navbar bg-base-100 shadow-sm">
       <div className="navbar-start">
@@ -49,17 +53,19 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-end gap-2">
-        {user ? (
-          <>
+        { loading ? (<ClockLoader />) : user ? (
+          <> 
+            <div className='flex justify-between items-center gap-2'>
+              <span className="font-semibold">{user.displayName || "User"}</span>
             <img src={user?.photoURL || "https://via.placeholder.com/88"} 
-            className='border h-20 w-20 rounded-full mx-auto' alt="" />
-            <span className="font-semibold">{user.displayName || "User"}</span>
+            className='border h-[40px] w-[40px] rounded-full mx-auto' alt="" />
             <button
               onClick={handleLogout}
               className="bg-red-500 text-white px-4 py-2 rounded-md font-semibold"
             >
               Logout
             </button>
+            </div>
           </>
         ) : (
           <NavLink

@@ -1,42 +1,28 @@
-// import React from 'react';
-
-// const PrivateRoute = () => {
-//     return (
-//         <div>
-//             {children}
-//         </div>
-//     );
-// };
-
-// export default PrivateRoute;
-
-
 import React, { use } from 'react';
-import { AuthContext } from '../../Provider/AuthProvider';
+import { AuthContext } from '../Contexts/AuthContext';
 import { Navigate, useLocation } from 'react-router';
-import Loading from '../../Pages/Loading/Loading';
+import { RiseLoader } from 'react-spinners';
+
 
 const PrivateRoute = ({children}) => {
-    const {user,loading} =use(AuthContext)
-    // console.log(user);
+    const {user, loading} = use(AuthContext);
 
     const location = useLocation();
-    // console.log(location)
+    console.log(location);
 
     if(loading){
-        return <Loading></Loading>
+        return (
+            <div className='h-[97vh] flex justify-center items-center'>
+                <RiseLoader />
+            </div>
+        )
+    }
+    if(!user){
+        return <Navigate to="/login" state={location.pathname}/>;
     }
 
 
-    //if have user 
-    if(user && user?.email){
-        return children;
-    }
-    return <Navigate state={location.pathname} to='/login'></Navigate>
-    
-    //if not user -- navigate -->Login
-
-    
+    return children;
 };
 
 export default PrivateRoute;

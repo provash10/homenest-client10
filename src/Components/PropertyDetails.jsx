@@ -39,9 +39,9 @@ const PropertyDetails = () => {
 
                     {/* edit-delete */}
                     <div className="flex justify-between items-center gap-4 flex-col sm:flex-row mx-0 sm:mx-20">
-                        <button className="bg-green-600 hover:bg-amber-600 hover:text-amber-100 text-2xl font-bold text-center px-6 py-3 rounded-3xl">
+                        <Link to={`/update-property/${_id}`} className="bg-green-600 hover:bg-amber-600 hover:text-amber-100 text-2xl font-bold text-center px-6 py-3 rounded-3xl">
                             Edit Property
-                        </button>
+                        </Link>
                         <button className="bg-red-600 hover:bg-cyan-500 hover:text-red-600 text-white text-2xl font-bold text-center px-6 py-3 rounded-3xl">
                             Delete Property
                         </button>

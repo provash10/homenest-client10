@@ -8,6 +8,7 @@ import MyPropertise from "../Pages/MyPropertise";
 import PropertyDetails from "../Components/PropertyDetails";
 import Register from "../Pages/Auth/Register";
 import PrivateRoute from "./PrivateRoute";
+import UpdateProperty from "../Components/UpdateProperty";
 
 
 export const router = createBrowserRouter([
@@ -26,7 +27,9 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/property-details/:id',
-                element: <PropertyDetails></PropertyDetails>,
+                element: <PrivateRoute>
+                    <PropertyDetails></PropertyDetails>
+                    </PrivateRoute>,
                 loader: ({params})=>fetch(`http://localhost:3000/properties/${params.id}`)
             },
             {
@@ -39,6 +42,15 @@ export const router = createBrowserRouter([
             {
                 path : '/my-propertise',
                 Component: MyPropertise,
+            },
+            {
+                path:"/update-property/:id",
+                element: 
+                    <PrivateRoute>
+                        <UpdateProperty></UpdateProperty>
+                    </PrivateRoute>,
+                    loader: ({ params }) => fetch(`http://localhost:3000/properties/${params.id}`),
+              
             },
             {
                 path : '/login',

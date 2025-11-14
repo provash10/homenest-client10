@@ -1,5 +1,6 @@
 import React from "react";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { Link } from "react-router";
 
 const Footer = () => {
   return (
@@ -7,7 +8,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-8">
         
         <div className="space-y-4">
-          <h2 className="text-2xl font-bold text-white">HomeNest</h2>
+          <Link to='/' className="text-2xl font-bold text-white">HomeNest</Link>
           <p className="text-gray-400">
             Your trusted real estate partner for buying, selling, and renting properties across the country.
           </p>
@@ -32,10 +33,10 @@ const Footer = () => {
           <h3 className="font-semibold text-white">Quick Links</h3>
           <ul className="space-y-2 text-gray-400">
             <li><a href="/" className="hover:text-white transition">Home</a></li>
-            <li><a href="/properties" className="hover:text-white transition">All Properties</a></li>
-            <li><a href="/add-property" className="hover:text-white transition">Add Property</a></li>
-            <li><a href="/my-properties" className="hover:text-white transition">My Properties</a></li>
-            <li><a href="/ratings" className="hover:text-white transition">My Ratings</a></li>
+            <li><a href="/all-propertise" className="hover:text-white transition">All Properties</a></li>
+            <li><a href="/add-propertise" className="hover:text-white transition">Add Property</a></li>
+            <li><a href="/my-property" className="hover:text-white transition">My Properties</a></li>
+            <li><a href="/my-ratings" className="hover:text-white transition">My Ratings</a></li>
           </ul>
         </div>
 

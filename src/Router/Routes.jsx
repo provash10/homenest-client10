@@ -16,6 +16,7 @@ export const router = createBrowserRouter([
     {
         path: ('/'),
         Component: Root,
+        hydrateFallbackElement: <p>Loading......</p>,
         children: [
             {
                 index: true,
@@ -58,7 +59,9 @@ export const router = createBrowserRouter([
             },
             {
                 path : '/my-ratings',
-                element: <MyRatings></MyRatings>,
+                element: <PrivateRoute>
+                    <MyRatings></MyRatings>,
+                </PrivateRoute>,
                 loader: () => fetch('http://localhost:3000/ratings')
             },
             {

@@ -34,7 +34,7 @@ const LatestProperty = ({ property }) => {
         <p className="text-xs text-gray-500 mb-1">{category}</p>
         <p className="text-sm text-gray-600 mb-2">{short_description}</p>
         <div className="flex justify-between mb-2">
-          <span className="font-bold text-sm">$ {price}</span>
+          <span className="font-bold text-sm text-gray-600">$ {price}</span>
           <span className="text-xs text-gray-500">{location}</span>
         </div>
         <div className="flex gap-4">

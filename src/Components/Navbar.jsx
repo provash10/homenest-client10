@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../Contexts/AuthContext';
 import toast from 'react-hot-toast';
 import { ClockLoader } from 'react-spinners';
@@ -31,7 +31,7 @@ const Navbar = () => {
   console.log(loading)
 
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-neutral-300 shadow-sm">
       <div className="navbar-start">
 
         <div className="dropdown">
@@ -44,7 +44,7 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">Home Nest 10</a>
+        <Link to='/' className="btn btn-ghost text-xl font-bold">Home Nest</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">

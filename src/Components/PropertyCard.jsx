@@ -65,13 +65,13 @@ const PropertyCard = ({property}) => {
         src={image}
         alt={name}
       />
-      <div className="p-3">
-        <h2 className="text-lg font-semibold text-gray-800">{name}</h2>
-        <p className="text-xs text-gray-500 mb-1">{category}</p>
-        <p className="text-gray-600 mb-2 text-sm">{short_description}</p>
+      <div className="p-3 m-2">
+        <h2 className="text-lg font-bold text-black">{name}</h2>
+        <p className="text-xs font-semibold p-2  text-black mb-1">{category}</p>
+        <p className="text-black mb-2 p-2 text-sm">{short_description}</p>
         <div className="flex justify-between items-center mb-2">
-          <span className="text-gray-800 font-bold text-sm">$ {price}</span>
-          <span className="text-gray-500 text-xs">{location}</span>
+          <span className="text-black font-bold text-sm">$ {price}</span>
+          <span className="text-black text-xs">{location}</span>
         </div>
 
         {/* <button onClick={handleViewDetails} className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm">
@@ -86,7 +86,7 @@ const PropertyCard = ({property}) => {
                             Delete Property
                         </button>
         </div>
-        <p className="text-xs text-gray-400 mt-1">Posted by {postedBy}</p>
+        <p className="text-xs text-black mt-2">Posted by {postedBy}</p>
       </div>
 
     </div>

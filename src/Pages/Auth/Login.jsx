@@ -4,6 +4,7 @@ import { Link, Navigate, useLocation, useNavigate } from 'react-router';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import toast from 'react-hot-toast';
 import { AuthContext } from '../../Contexts/AuthContext';
+import LoginButton from './Login Button/LoginButton';
 
 
 const Login = () => {
@@ -144,7 +145,7 @@ const Login = () => {
               
 
               <button type="submit" className="my-btn">
-                  Login
+                  <LoginButton/>
                 </button>
 
               {/* Divider */}
